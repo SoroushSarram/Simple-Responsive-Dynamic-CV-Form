@@ -1,0 +1,455 @@
+
+
+/* default css start */
+.logo-bottom 
+{
+    color: #72AB00;
+}
+
+.fz-16 
+{
+    font-size: 16px;
+}
+
+.fz-20 
+{
+    font-size: 20px;
+}
+
+.fc-green 
+{
+    color: #72AB00;
+}
+
+.fc-grey 
+{
+    color: #9A9A9A;
+}
+
+.mt-1 
+{
+    margin-top: 8px;
+}
+
+.mb-1 
+{
+    margin-bottom: 8px;
+}
+
+.mt-2 
+{
+    margin-top: 16px;
+}
+
+.mb-2 
+{
+    margin-bottom: 16px;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+h1 
+{
+    font-size: 38px;
+}
+
+.d-flex 
+{
+    display: flex;
+}
+
+.text-right 
+{
+    text-align: right;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover 
+{
+    cursor: pointer;
+    
+}
+/* default css end */
+
+body 
+{
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: rgba(0,0,0,.6);
+}
+
+.main-container 
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* container css start */
+.container 
+{
+    width: -wepkit-fill-available;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px) 
+{
+    .container 
+    {
+        max-width: 960px;
+    }
+}
+/* container css end */
+
+header 
+{
+    background-color: #000;
+    padding: 20px 0;
+}
+
+    header .container
+    {
+        display: flex;
+    }
+
+    header h1 
+    {
+        margin: 0;
+        font-size: 40px;
+    }
+
+
+.site-navbar 
+{
+    display: flex;
+    width: 100%;
+}
+
+    /* navbar regular css start */
+    .site-navbar ul
+    {
+        margin: auto 0 auto auto;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        z-index: 2;
+    }
+
+        .site-navbar ul li button
+        {
+            letter-spacing: 3px;
+            padding: 10px;
+            margin-left: 3px;
+            margin-right: 3px;
+            border: none;
+            background-color: transparent;
+            color: #9A9A9A;
+            font-size: 14px;
+        }
+
+            .site-navbar ul li button:hover 
+            {
+                border-bottom: 2px solid #72AB00;
+            }
+
+            .site-navbar ul li button.active 
+            {
+                border-bottom: 2px solid #72AB00;
+                outline: none;
+            }
+
+.content 
+{
+    display: none;
+}
+
+    .content.active 
+    {
+        display: block;
+    }
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler 
+{
+    border: 1px solid #fff;
+    margin-left: auto;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+}
+
+    .nav-toggler span,
+    .nav-toggler span:before,
+    .nav-toggler span:after
+    {
+        width: 28px;
+        height: 3px;
+        background-color: #fff;
+        display: block;
+        transition: .3s;
+    }
+
+        .nav-toggler span:before
+        {
+            content: '';
+            transform: translateY(-9px);
+        }
+
+        .nav-toggler span:after 
+        {
+            content: '';
+            transform: translateY(6px);
+        }
+
+    .nav-toggler.toggler-open span 
+    {
+        background-color: transparent;
+    }
+
+        .nav-toggler.toggler-open span:before 
+        {
+            transform: translateY(0px) rotate(45deg);
+        }
+
+        .nav-toggler.toggler-open span:after 
+        {
+            transform: translateY(-3px) rotate(-45deg);
+        }
+/* nav-toggler css end */
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) 
+{
+
+    /* navbar css for mobile start */
+    .nav-toggler 
+    {
+        display: block;
+    }
+
+    .site-navbar 
+    {
+        min-height: 60px;
+    }
+
+        .site-navbar ul 
+        {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 60px);
+            left: 0;
+            top: 60px;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0,0,0,.75);
+            max-height: 0;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+            .site-navbar ul li 
+            {
+                width: 100%;
+                text-align: center;
+            }
+
+            .site-navbar ul.open 
+            {
+                max-height: 100vh;
+                overflow: visible;
+            }
+    /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
+
+/*========== home page css start=========== */
+.my-photo 
+{
+    padding-top: 8px;
+}
+
+.home-card,
+.cv-card,
+.experience-card,
+.contact-card 
+{
+    margin: 20px 0px;
+    padding: 30px;
+    background-color: #F8F8F8;
+    border: 1px solid #CDCDCD;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hello 
+{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .hello h1 
+    {
+        color: #72AB00;
+        font-size: 40px;
+        margin: 0 !important;
+    }
+
+#cvBtn, #contactBtn
+{
+    width: 80px;
+    height: 30px;
+    background-color: #72AB00;
+    border: 0;
+    color: white;
+}
+
+.intro 
+{
+    display: flex;
+}
+
+    .intro > div 
+    {
+        flex: 1;
+    }
+
+footer 
+{
+    padding: 20px 0;
+    border-top: 1px solid #D1D1D1;
+    margin-top: 20px;
+}
+
+    footer .container 
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+/*======= home page responsive start========== */
+@media screen and (max-width: 810px) 
+{
+    .home-card 
+    {
+        flex-direction: column;
+    }
+
+    .hello
+    {
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 576px) 
+{
+    .my-photo 
+    {
+        width: 100%;
+    }
+
+    .hello 
+    {
+        padding: 15px 0;
+    }
+
+    .intro 
+    {
+        flex-direction: column;
+    }
+}
+/*===== home page responsive end ======*/
+
+/*=============== home page css end=============== */
+
+/* ============== cv page css start ============== */
+.cv-card h1 
+{
+    color: #72AB00;
+    margin: 15px 0;
+}
+
+.cv-card h2 
+{
+    margin: 15px 0;
+}
+
+.cv-content 
+{
+    display: flex;
+}
+
+.cv-content-left 
+{
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 810px)
+{
+    .cv-card 
+    {
+        flex-direction: column;
+    }
+
+    .cv-content
+    {
+        flex-direction: column;
+    }
+
+        .cv-content h2 
+        {
+            border-bottom: 1px solid #CDCDCD;
+            padding-bottom: 5px;
+        }
+}
+/* ============== cv page css end ============== */
+
+/* ============== contact form css start ========*/
+.contact-form input, form textarea
+{
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border: 1px solid #72AB00;
+    outline: 0;
+    padding: 5px 10px;
+}
+
+.contact-form > div
+{
+    margin-bottom: 5px;
+}
+
+.contact-info 
+{
+    padding-right: 50px;
+}
+
+@media screen and (max-width: 576px)
+{
+    .contact-info 
+    {
+        padding-right: 0;
+    }
+
+    .contact-card > div 
+    {
+        flex-direction: column;
+    }
+}
+/* ============== contact form css end  ========*/
